@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Sparkles,Bot,Box,GraduationCap } from 'lucide-react';
-import Image from 'next/image';
+import { ArrowRight, Sparkles, Bot, Box, GraduationCap } from "lucide-react";
+import Image from "next/image";
 
 export default function LandingPage() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,8 +13,8 @@ export default function LandingPage() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -23,8 +23,8 @@ export default function LandingPage() {
       <header
         className={`fixed w-full top-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-lg'
-            : 'bg-transparent'
+            ? "bg-white/95 backdrop-blur-md shadow-lg"
+            : "bg-transparent"
         }`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
@@ -35,16 +35,15 @@ export default function LandingPage() {
             </div>
             <div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-                أوج
+                اوج
               </h1>
               <p className="text-xs text-cyan-600 font-medium">
-                لغة بلا حدود
+                تواصلٌ.. بلا حواجز
               </p>
             </div>
           </div>
 
           {/* زر الدخول */}
-         
         </nav>
       </header>
 
@@ -74,34 +73,38 @@ export default function LandingPage() {
               <div className="space-y-4">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in-up">
                   <span className="bg-gradient-to-r from-blue-900 via-blue-600 to-cyan-500 bg-clip-text text-transparent">
-                    أوج
+                    اوج
                   </span>
                   <br />
-                  <span className="text-gray-800">لغة بلا حدود</span>
+                  <span className="text-gray-800">تواصلٌ.. بلا حواجز</span>
                 </h1>
 
                 {/* الوصف */}
                 <p className="text-xl md:text-2xl text-gray-700 leading-relaxed animate-fade-in-up animation-delay-200">
-                  تعليم معزز بالذكاء الاصطناعي وتقنيات ثلاثية الأبعاد لترجمة
+                  لأن الوصول للقمة يبدأ بفهم الآخر، نُقدم لكم موقع "اوج" الذي
+                  يُسخر تقنيات الذكاء الاصطناعي والأفاتار ثلاثي الأبعاد لترجمة
                   <span className="font-bold text-cyan-600"> لغة الإشارة </span>
-                  بطريقة احترافية وسهلة
                 </p>
               </div>
 
               {/* وصف إضافي */}
               <p className="text-lg text-gray-600 animate-fade-in-up animation-delay-300">
-                منصة تعليمية ذكية تربط بين الصم والبكم والسامعين من خلال ترجمة فورية ودقيقة لـ<span className="font-semibold text-blue-600"> لغة الإشارة</span>
+                هدفنا كسر العزلة وجعل التواصل أكثر سهولة، دقة، وانسيابية.. ليكون
+                الحوار حقًا .
+                <span className="font-semibold text-blue-600">
+                  {" "}
+                  متاحاً للجميع
+                </span>
               </p>
 
               {/* زر البداية */}
               <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 animate-fade-in-up animation-delay-400">
                 <Link href="/home">
-                <Button className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-bold px-10 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer w-full sm:w-auto">
-                  ابدأ الآن 
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
+                  <Button className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-bold px-10 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer w-full sm:w-auto">
+                    ابدأ الآن
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
                 </Link>
-
               </div>
             </div>
 
@@ -116,11 +119,15 @@ export default function LandingPage() {
                 <div className="absolute inset-12 bg-gradient-to-br from-blue-500 via-cyan-400 to-purple-500 rounded-full shadow-2xl animate-float flex items-center justify-center overflow-hidden">
                   {/* عناصر داخل الكرة */}
                   <div className="absolute w-32 h-32 bg-white/20 rounded-full blur-xl animate-pulse"></div>
-                  
+
                   {/* أيقونة وسط */}
                   <div className="relative z-10 text-center">
-                    <div className="text-6xl mb-2"><img src="/logo.png" width="200px" /></div>
-                    <p className="text-white font-bold text-sm">اتصال بدون حدود</p>
+                    <div className="text-6xl mb-2">
+                      <img src="/logo.png" width="200px" />
+                    </div>
+                    <p className="text-white font-bold text-sm">
+                      تواصلٌ.. بلا حواجز
+                    </p>
                   </div>
                 </div>
 

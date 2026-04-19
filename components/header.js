@@ -6,7 +6,7 @@ import { ArrowRight, Sparkles, LogOut } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Header({title, description}) {
+export default function Header({ title, description }) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -16,8 +16,6 @@ export default function Header({title, description}) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  
 
   return (
     <div>
@@ -37,29 +35,27 @@ export default function Header({title, description}) {
             </div>
             <div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-                أوج
+                اوج
               </h1>
-              <p className="text-xs text-cyan-600 font-medium">لغة بلا حدود</p>
+              <p className="text-xs text-cyan-600 font-medium">
+                تواصلٌ.. بلا حواجز
+              </p>
             </div>
-            
           </div>
- <div className="text-center">
+          <div className="text-center">
             <h1 className="text-xl  md:text-3xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">
-               {title}
+              {title}
             </h1>
             <p className="text-gray-600 text-sm sm:text-base"> {description}</p>
           </div>
 
           {/* زر الخروج */}
           <Link href="/home">
-          <Button
-            
-            className="bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white font-semibold px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-          >
-            <LogOut className="w-4 h-4" />
-            خروج
-          </Button>
-            </Link>
+            <Button className="bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white font-semibold px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+              <LogOut className="w-4 h-4" />
+              خروج
+            </Button>
+          </Link>
         </nav>
       </header>
     </div>
